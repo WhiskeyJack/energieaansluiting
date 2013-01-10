@@ -90,6 +90,19 @@ function html_header($page, $objectid = "", $obj_ref = "", $searchopt = "", $par
 	$buf .= "    <![endif]-->\n";
   
   $buf .= $js;
+  
+  // Google tracking script
+  $buf .= "    <script type=\"text/javascript\">\n";
+  $buf .= "      var _gaq = _gaq || [];\n";
+  $buf .= "      _gaq.push(['_setAccount', 'UA-24007859-14']);\n";
+  $buf .= "      _gaq.push(['_trackPageview']);\n";
+  $buf .= "      (function() {\n";
+  $buf .= "        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;\n";
+  $buf .= "        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n";
+  $buf .= "        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);\n";
+  $buf .= "      })();\n";
+  $buf .= "    </script>\n";
+
   $buf .= "    <title>" . $cfg['title'] . "</title>\n";
   $buf .= "  </head>\n\n";
   $buf .= "  <body$body_option>\n";
@@ -352,6 +365,19 @@ function html_header_login($page, $showbox = true){
 	$buf .= "      </style>\n";
 	$buf .= "    <![endif]-->\n";
   $buf .= $js;
+
+  // Google tracking script
+  $buf .= "    <script type=\"text/javascript\">\n";
+  $buf .= "      var _gaq = _gaq || [];\n";
+  $buf .= "      _gaq.push(['_setAccount', 'UA-24007859-14']);\n";
+  $buf .= "      _gaq.push(['_trackPageview']);\n";
+  $buf .= "      (function() {\n";
+  $buf .= "        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;\n";
+  $buf .= "        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n";
+  $buf .= "        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);\n";
+  $buf .= "      })();\n";
+  $buf .= "    </script>\n";
+
   $buf .= "    <title>" . $cfg['title'] . "</title>\n";
   $buf .= "  </head>\n\n";
   $buf .= "  <body$body_option>\n";
