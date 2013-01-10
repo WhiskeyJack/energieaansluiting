@@ -1,0 +1,106 @@
+/*	
+	CFD Version: Beta .33
+
+	This file is part of CSSButtons.
+
+    CSSButtons is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    CSSButtons is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with CSSButtons. If not, see <http://www.gnu.org/licenses/>.
+*/
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	BUTTON DEFINITION CLASS */
+
+	button.cssbutton {border:0; text-align:center; padding:0; margin:0; cursor:pointer;}
+	button.cssbutton span {font:bold 12px/23px Verdana; color:#666; display:block; cursor:pointer; position:relative; white-space:nowrap; height:23px; margin-left:1px; padding:0 10px 0 9px;} /* padding-left = (padding-right - margin-left) NOTE: Firefox renders this different */
+	
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	LINK DEFINITION CLASS */
+	
+	a.cssbutton {border:0;float:left;text-align:center;padding:0;margin:0;cursor:pointer;text-decoration: none;}
+	a.cssbutton span {font:bold 12px/23px Verdana; color:#666; display:block; float: left; white-space:nowrap; height:23px; margin-left:1px; padding:0 10px 0 9px;} /* padding-left = (padding-right - margin-left) NOTE: Firefox renders this different */
+	
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	INPUT DEFINITION CLASS */
+	
+	div.cssbutton {border:0; float:left; text-align:center; padding:0; margin:0; cursor:pointer; height:23px}
+	div.cssbutton input {border:0; font:bold 12px/23px Verdana; color:#666; display:block; cursor:pointer; float:left; white-space:nowrap; height:23px; margin-left:1px; padding:0 10px 0 9px;} /* padding-left = (padding-right - margin-left) NOTE: Firefox renders this different */
+
+
+/* ===== LOGIN BUTTON ===== */  
+
+/*  Overrides the CSS Buttons Framework */
+button.cssbutton.loginb span,a.cssbutton.loginb span,div.cssbutton.loginb input {
+color:#924F4F;
+  position: relative;
+
+}
+
+/*  Name:   loginb a 
+  Desc: Blue Button */
+button.cssbutton.loginb.a span,a.cssbutton.loginb.a span,div.cssbutton.loginb.a input {
+background:url("../images/ButtonaRight.gif") no-repeat right 0;
+}
+
+button.cssbutton.loginb.a,a.cssbutton.loginb.a,div.cssbutton.loginb.a {
+background:url("../images/ButtonaLeft.gif") no-repeat 0 center;
+  bottom: 35px;
+  left:250px;
+  position: relative;
+  
+}
+
+button.cssbutton.loginb.a:hover span,a.cssbutton.loginb.a:hover span,div.cssbutton.loginb.a:hover input {
+color:#666;
+background:url("../images/ButtonaRight.gif") no-repeat right 100%;
+}
+
+button.cssbutton.loginb.a:hover,a.cssbutton.loginb.a:hover,div.cssbutton.loginb.a:hover {
+background:url("../images/ButtonaLeft.gif") no-repeat -255px center;
+}
+
+
+/* ===== EDIT BUTTON ===== */
+
+/*  Overrides the CSS Buttons Framework */
+button.cssbutton.editb span,a.cssbutton.editb span,div.cssbutton.editb input {
+color:#924F4F;
+  position: relative;
+}
+
+
+/*  Name:   sample a 
+  Desc: Blue Button */
+button.cssbutton.editb.b span,a.cssbutton.editb.b span,div.cssbutton.editb.b input {
+background:url("../images/ButtonaRight.gif") no-repeat right 0;
+}
+
+button.cssbutton.editb.b,a.cssbutton.editb.b,div.cssbutton.editb.b {
+background:url("../images/ButtonaLeft.gif") no-repeat 0 center;
+top: 10px;
+  left:450px;
+  position: relative;
+  height:23px;
+}
+
+button.cssbutton.editb.b:hover span,a.cssbutton.editb.b:hover span,div.cssbutton.editb.b:hover input {
+color:#666;
+background:url("../images/ButtonaRight.gif") no-repeat right 100%;
+}
+
+button.cssbutton.editb.b:hover,a.cssbutton.editb.b:hover,div.cssbutton.editb.b:hover {
+background:url("../images/ButtonaLeft.gif") no-repeat -255px center;
+}
+
+
+

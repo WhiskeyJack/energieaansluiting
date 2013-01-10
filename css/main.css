@@ -1,0 +1,639 @@
+/* --------------------------------------- Standaard lay out elementen --------------------------------------- */
+
+* {
+margin:0;
+padding:0;
+}
+
+* body {
+font-size:.74em; 
+/*default pakt de browser het eerste font uit onderstaande lijst, als deze niet op de computer bestaat pakt ie de tweede enz. */
+font-family:Tahoma, Arial, Trebuchet MS, Tahoma, sans-serif;
+line-height:1.64em;
+/*Dit komt omdat alle "browser veilige kleuren" uit dubbele cijfers en getallen bestaat. Tegenwoordig gebruikt bijna niemand meer 256 kleuren, dus is er geen probleem meer om niet browser veilige kleuren te kiezen.
+Browser veilige kleuren zijn (toevallig0 standaard verdubbeld. Hierdoor heb je bijvoorbeeld #CC0099, dat kun je in CSS schrijven als #C09. Als deze verdubbeling niet optreedt, moet je de volledige 6-delige code geven. */
+background:#FFF;
+color:#444;
+}
+textarea{resize: none}
+
+
+a {
+color:#299DCA;
+text-decoration:none;
+}
+
+a:hover {
+color:gray;
+/*Note: No versions of Internet Explorer (including IE8) support the property value "inherit". */
+
+}
+
+fieldset
+{
+  border: none;
+}
+
+p {
+/*The margin property can have from one to four values.
+
+    * margin:25px 50px 75px 100px;
+          o top margin is 25px
+          o right margin is 50px
+          o bottom margin is 75px
+          o left margin is 100px
+
+    * margin:25px 50px 75px;
+          o top margin is 25px
+          o right and left margins are 50px
+          o bottom margin is 75px
+
+    * margin:25px 50px;
+          o top and bottom margins are 25px
+          o right and left margins are 50px
+
+    * margin:25px;
+          o all four margins are 25px
+ */
+margin:0 0 15px;
+padding-left: 3px;
+}
+
+h1 {
+/*
+font-weight: normal; (dikte van het font)
+font-size: 2.4 em;
+font-family: heveltica;
+*/
+font:normal 2.4em Helvetica;
+margin:15px 0 0 5px;
+}
+
+h1 a:hover {
+color:#0066CC;
+} 
+
+h2 {
+font:bold 1.6em Arial, Sans-Serif;
+margin:0 0 12px;
+}
+
+h4 {
+color:gray;
+font-weight:400;
+font-size:.9em;
+}
+
+select {
+font-family:Tahoma, Arial, Trebuchet MS, Tahoma, sans-serif;
+}
+
+td {
+vertical-align: top;
+}
+
+#page {
+ /* main div specifying width */
+	/* width: 1024px; */
+width: 974px;
+  /*Hiermee centreer je de pagina, ook als de browser kleiner of groter gemaakt wordt. 
+Een alternatieve versie (zie boven) zou margin:0 auto zijn, waarmee je de margin top en bottom op 0 zet en de margin links en rechts op auto */
+margin:0 auto;
+}
+
+._red {
+	color: red;
+	}
+._success {
+  color: green;
+  font-size: 1em;
+  font-weight: bold;
+  }	
+.p_message, .p_message_red, .p_message_green{
+  font-size: 1em;
+  font-weight: bold;	
+	}  
+.p_message_green {
+	color: green;
+	}  
+.p_message_red {
+	color: red;
+	}
+/* --------------------------------------- Header informatie --------------------------------------- */
+
+#header {
+  height:58px;  
+  border-bottom:5px solid #7DD0F1;
+   clear: both; 
+}
+
+#logo {
+  float:right;
+  height:58px;
+  width:250px;
+  text-align: right;
+}
+
+#mainmenu {
+	float:right;
+	/* width: 300px;*/
+  width: 250px;
+	position: relative;
+	top: 37px;
+}
+
+#mainmenu li {
+font-size:1.1em;
+display:inline;
+}
+
+#mainmenu li a {
+color:gray;
+border-left:1px solid #e0e0e0;
+margin:0 45px 0 0;
+padding: 3px 0px 3px 10px;
+}
+
+#mainmenu li a:hover {
+color:#000;
+border-left:1px solid #7DD0F1;
+}
+
+ul#mainmenu {
+color:#000;
+ border-bottom: none;
+}
+
+/* --------------------------------------- Formulier --------------------------------------- */
+#searchbox {
+float:left;
+height:39px;
+margin:19px 0 5px;
+text-align: right;
+}
+
+#loginbox {
+float:left;
+height:39px;
+margin:5px 0 5px;
+text-align: right;
+
+}
+
+#loginbox .login_name {
+ padding: 2px;
+ margin-left: 9px;
+ text-align: left;
+}
+
+#loginbox .login_pass{
+ padding: 2px;
+}
+
+.login_name input, .login_pass input 
+{
+border: 1px solid #7DD0F1;
+}
+
+
+
+.submitButton{
+  /* used in  searchbox */
+  background:url(../images/go18.png) no-repeat;
+  cursor:pointer;
+  width: 15px;
+  height: 18px;
+  border: none;
+  valign: bottom;
+  
+ }
+.login_submitbutton {
+  /* used in  loginbox */
+	cursor:pointer;
+	width: 60px;
+	height: 20px;
+	position: relative;
+	bottom: 10px;
+	left: 20px;
+	background-color: #fff;
+	font-size: 15px;
+	font-weight: bold;
+	color: #7DD0F1;
+	/*color: #0000FF;*/
+	border: 1px solid #7DD0F1;
+	}
+	
+
+.login_submitbutton:hover {
+	color: #fff;
+	background-color: #7DD0F1;	
+}
+
+
+ 
+ .search_row {
+ height: 20px;
+ clear: both;
+ }
+ 
+/* --------------------------------------- Objecten --------------------------------------- */
+ 
+#object_reference {
+
+  padding-top: 10px;
+  padding-left: 10px;
+} 
+
+/* --------------------------------------- TABS --------------------------------------- */
+#tabs {
+  /* height:20px;*/ 
+  /*padding: 10px 0 10px 0px;*/
+  padding: 10px 0 0px 0px;
+/* Met deze regel kun je de floats afsluiten, waardoor de opmaak netjes blijft */  
+  clear: both;
+
+}
+
+ul, li {
+border:0; 
+margin:0; 
+padding:0; 
+list-style:none;
+}
+ul.register_errors {
+	display: inline;
+	border-bottom: none;
+	padding; none;
+}
+ul.val_errors {
+	color: red;
+	border-bottom: none;
+	padding: none;
+	display: inline-block;
+	padding-bottom: 20px;
+}
+
+p.val_errors {
+margin: 0px;
+}
+
+
+ul.register_errors li {
+	list-style:circle;
+	float: none;
+	margin-left: 15px;
+	 padding; none;
+}
+	
+ul.val_errors li {
+  list-style:circle;
+  float: none;
+  margin-left: 15px;
+   padding; none;
+}
+
+
+ul {
+border-bottom:solid 1px #DEDEDE;
+height:29px;
+padding-left:20px;
+}
+
+li {
+float:left; 
+margin-right:2px;
+}
+
+.tab a:link, .tab a:visited{
+background:url(../images/tab-round.png) right 60px;
+color:#666666;
+display:inline-block;
+font-weight:bold;
+height:30px;
+line-height:30px;
+text-decoration:none;
+cursor: hand;
+}
+
+.tab a span{
+background:url(../images/tab-round.png) left 60px;
+display:inline-block;
+height:30px;
+margin-right:14px;
+padding-left:14px;
+}
+
+.tab a:hover{
+background:url(../images/tab-round.png) right 30px;
+display:inline-block;
+}
+.tab a:hover span{
+background:url(../images/tab-round.png) left 30px;
+display:inline-block;
+}
+
+.active a:link, .active a:visited, .active a:visited, .active a:hover{
+background:url(../images/tab-round.png) right 0 no-repeat;
+}
+.active a span, .active a:hover span{
+background:url(../images/tab-round.png) left 0 no-repeat;
+}
+
+.print_image {
+  margin-bottom : -3px;
+   margin-left : 5px;
+}
+
+/* --------------------------------------- Content --------------------------------------- */
+
+#content {
+	clear: both;
+  margin:0 auto;
+  padding: 10px 10px 10px 10px;
+  border-left:1px solid #ccc;
+  border-right:1px solid #ccc;
+}
+#div_val_errors {
+	float: none;
+	display:inline;
+	}
+	
+
+
+.fatal-error {
+  height:200px; 
+  color: #FF0000;	
+}
+
+/* ------------Table main ------------------- */
+#table_main {
+	 vertical-align: top;
+	 font-weight: none;
+	 width:1004px;
+   width: 954px;  
+}
+#table_config, #table_config td {
+   
+   font-weight: none;
+   padding: 5px;
+}
+#register_table {
+	margin-top: 20px;
+	}
+
+#table_main tr, #register_table tr {
+  height: 27px;
+}
+
+.tr_main_empty_line {
+	height: 30px;
+}
+.tr_small_empty_line {
+  height: 15px;
+}
+.td_border_bottom {
+	  border-bottom:1px solid #ccc;
+}
+
+.td_main_title, .td_main_title_red {
+  font-weight: bold;
+  width: 118px;
+   padding-left: 5px;
+ padding-right: 5px;
+}
+.td_main_title_red {
+  color: red;
+}
+.td_main {
+  width: 202px;
+}
+#register_table td {
+  font-weight: bold;
+  width: 200px;
+   padding-left: 5px;
+ padding-right: 5px;
+}
+
+.td_main_title_wide, .td_main_title_wide_red  {
+  font-weight: bold;
+  width: 150px;
+   padding-left: 5px;
+ padding-right: 5px;
+}
+
+.td_main_title_wide_red {
+  color: red;
+}
+
+.td_main_title_middle, .td_main_title_middle_red  {
+  font-weight: bold;
+  width: 140px;
+   padding-left: 5px;
+ padding-right: 5px;
+}
+
+.td_main_title_middle_red {
+  color: red;
+}
+
+.td_main_title_right, .td_main_title_right_red {
+  font-weight: bold;
+  width: 140px;
+   padding-left: 5px;
+ padding-right: 5px;
+}
+
+.td_main_title_right_red  {
+  color: red;
+}
+
+.td_main_wide {
+  width: 180px;
+}
+
+.td_main_middle {
+  width: 150px;
+}
+
+
+.td_main_spacer {
+  font-weight: bold;
+  /* width: 6px; */
+}
+.td_org_spacer {
+  
+  width: 20px;
+}
+
+.td_main, .td_main_title, .td_main_wide, .td_main_title_wide {
+	vertical-align: top;
+}
+.td_main_colspan_title {
+    width: 330px;
+    font-weight: bold;
+}
+.td_org_container {
+ border:1px solid #ccc;
+ padding-left: 20px;
+ padding-right: 5px;
+ padding-top: 5px;
+ vertical-align: top;
+ /*width: 321px;*/
+ width: 450px;
+}
+
+/* ------------org divs ------------------- */
+#naamvan, #jeigenaar, #eigenaar {
+	margin: 0;
+	padding: 0;
+	}
+
+/* ------------Table org ------------------- */
+.table_organization {
+border: 0;
+padding: 0;
+border-spacing: 0;
+}
+.table_organizations {
+border: 0;
+padding: 0;
+border-spacing: 0;
+}
+.table_address {
+border: 0;
+padding: 5px;
+border-spacing: 0;
+width: 400px;
+}
+.table_address tr{
+height: 20px !important;
+vertical-align: top;
+}
+.table_address td{
+padding-left: 10px;
+vertical-align: top;
+}
+.td_org {
+	   width: 200px; 
+	  
+}
+.td_org_title {
+    /*width: 110px !important;*/
+    font-weight: bold;
+}
+.td_netwerkb_title, td_netwerkb_title_red {
+    width: 180px !important;
+    font-weight: bold;
+}
+td_netwerkb_title_red {
+	color: red;
+	}
+.td_adr_title, .td_adr_title_red {
+    width: 110px !important;
+    font-weight: bold;
+}
+.td_adr_title_red {
+	color: red;
+	}
+.td_org_subtitle {
+    width: 110px !important;
+}
+.td_org_colspan {
+    width: 330px;
+}
+.org_select select {
+  width: 150px;
+margin:0; 
+  	
+}
+
+.td_main_colspan8 {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.table_org_details {
+	width: 420px;
+	margin: 0;
+	padding-left: 15px;
+	border:1px solid #ccc;
+	}
+
+
+
+/* ------------Table search_results ------------------- */
+
+
+
+
+
+#table_searchresults th {
+  font: bold 11px "Trebuchet MS", Verdana, Arial, Helvetica,
+  sans-serif;
+  color: #299DCA;
+  border-right: 1px solid #C1DAD7;
+  border-bottom: 1px solid #C1DAD7;
+  border-top: 1px solid #C1DAD7;
+  border-left: 1px solid #C1DAD7;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 3px 12px 3px 12px;
+  background: #CAE8EA url(images/bg_header.jpg) no-repeat;
+}
+
+#table_searchresults td, .objectname{
+  text-align: left;
+  padding: 3px 12px 3px 12px;
+}
+.td_objectname{
+	width: 300px;
+}
+.td_internalcode{
+  width: 130px;
+}
+
+
+#table_searchresults tr:hover {
+  background-color: #CAE8EA;
+}  
+#table_searchresults tr td a {
+    display:block;
+    height:100%;
+    width:100%;
+    color:#444;
+}
+  
+  
+
+
+#edit_button {
+    text-align: center;
+      /* width: 1004px; */
+      width: 954px;
+  margin:0 auto;
+  height: 40px;
+}
+
+#update-timestamp {
+  	text-align: right;
+  	font-size:.9em;
+}
+
+/* --------------------------------------- FOOTER --------------------------------------- */
+#footer {
+  /*width: 1004px; */
+  width: 954px;
+  margin:0 auto;
+  clear:both;
+  border-top:1px solid #ccc;
+  font-size:.9em;
+  color:#9b9b9b;
+  background:#fff;
+  padding:7px 10px 0 10px;
+}
+
+.right {
+float:right;
+
+}
